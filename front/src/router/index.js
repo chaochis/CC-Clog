@@ -7,7 +7,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'main',
+      name: 'ccmain',
       component: ()=> import('@/pages/ccmain')
     }
   ]

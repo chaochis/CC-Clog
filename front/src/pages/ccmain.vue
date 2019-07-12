@@ -4,7 +4,7 @@
 <script>
 import ccnav from '@/components/ccnav'
 export default {
-    name: 'main',
+    name: 'ccmain',
     components: {ccnav}
 }
 </script>
