@@ -9,6 +9,10 @@ spring:
     username: root
     password: chao345.
     #druid相关配置
+  redis:
+    host: 192.168.23.130
+    port: 6379
+    database: 0
 druid:
   #监控统计拦截的filters
   filters: stat

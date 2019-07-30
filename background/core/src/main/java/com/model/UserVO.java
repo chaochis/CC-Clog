@@ -5,9 +5,12 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import java.io.Serializable;
+import java.util.regex.Pattern;
+
 @Data
 @TableName("user")
-public class UserVO {
+public class UserVO implements Serializable {
 
     @TableId("Id")
     private String id;
@@ -20,5 +23,10 @@ public class UserVO {
 
     @TableField("email")
     private String email;
+
+    public static void main(String [] args){
+        System.out.print(""+Pattern.matches("\\d","2"));
+    }
+
 
 }
