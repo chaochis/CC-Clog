@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> 
+<!--[if gt IE 8]>-->
 <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
@@ -14,7 +14,7 @@
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script src="https://unpkg.com/element-ui/lib/index.js"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-       <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/0.7.10/vue-router.min.js"></script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/0.7.10/vue-router.min.js"></script> -->
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -23,19 +23,11 @@
         <div id="app">
             {{src}}
         </div>
-        
     </body>
 
     <script type="text/javascript">
-        new Vue({
-            el: '#app',
-            data: {
-                src: 'http://192.168.23.130:8002/image/egret_icon.png'
-            }
-        });
-        axios.get("localhost:80/login").then(res=>{
-            alert(res);
-        })
+        var a = new axios();
+        console.log(a);
     </script>
 </html>
 

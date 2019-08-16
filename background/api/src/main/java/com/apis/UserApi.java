@@ -1,8 +1,6 @@
 package com.apis;
 
-import com.alibaba.druid.support.json.JSONUtils;
 import com.apimodel.UserModel;
-import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.model.UserVO;
 import com.service.def.UserService;
 import com.util.TokenUtil;
@@ -11,14 +9,10 @@ import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.Serializable;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 @RestController("/")
 @AllArgsConstructor
@@ -37,6 +31,5 @@ public class UserApi {
         String token = TokenUtil.generateToken();
         return token;
     }
-
 
 }
