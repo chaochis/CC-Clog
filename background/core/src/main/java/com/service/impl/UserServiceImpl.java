@@ -18,4 +18,15 @@ public class UserServiceImpl implements UserService {
     public List<UserVO> getAllUser() {
         return this.userMapper.selectList(null);
     }
+
+    @Override
+    public void saveUser(UserVO userVO) {
+
+    }
+
+    @Override
+    public void deleteUsers(String[] ids) {
+
+    }
+
 }
