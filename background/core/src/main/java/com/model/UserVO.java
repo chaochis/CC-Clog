@@ -24,9 +24,4 @@ public class UserVO implements Serializable {
     @TableField("email")
     private String email;
 
-    public static void main(String [] args){
-        System.out.print(""+Pattern.matches("\\d","2"));
-    }
-
-
 }

@@ -20,4 +20,5 @@ public class UserModel {
     @ApiModelProperty(value = "电话号码", name = "telNum")
     private String telNum;
 
+
 }
