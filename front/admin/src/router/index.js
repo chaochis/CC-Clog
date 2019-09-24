@@ -1,14 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import mainRoute from './route/mainRoute'
 
 Vue.use(Router)
 
-export default new Router({
+
+let router = new Router({
   routes: [
-    {
-      path: '/',
-      name: 'ccmain',
-      component: ()=> import('@/pages/ccmain')
-    }
+    ...mainRoute
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title
+  next()
+})
+
+
+export default router
+

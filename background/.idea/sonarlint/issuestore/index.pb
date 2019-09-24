@@ -21,3 +21,5 @@ _
 -api/src/main/java/com/apimodel/UserModel.java,7\d\7de495e399f9f0985590ebfd6ece9068daf65df8
 W
 'api/src/main/java/com/apis/UserApi.java,d\c\dc744133d003109cba5b368825730fecfee7c759
+c
+3core/src/main/java/com/service/def/UserService.java,3\a\3a0c34bbaa7431a0e9667a77616ad5c6fa0559b5

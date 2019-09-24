@@ -5,14 +5,12 @@ import App from './App'
 import router from './router'
 import elementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import vant from 'vant'
 Vue.config.productionTip = false
 
 Vue.use(elementUI);
-Vue.use(vant);
 
 /* eslint-disable no-new */
-new Vue({
+let app = new Vue({
   el: '#app',
   router,
   components: { App },
