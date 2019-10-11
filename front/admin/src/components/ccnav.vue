@@ -1,10 +1,10 @@
 <template>
     <div id="cc-nav">
-      he
     </div>
 </template>
 <script>
 import cclogin from './cclogin'
+import axios from '../apis/apis'
 export default {
     name: 'cc-nav',
     components: {cclogin},
@@ -13,10 +13,7 @@ export default {
             searchText: ""
         };
     },
-    methods: {
-        onSearch(){
-            alert("1")
-        }
+    created () {
     }
 }
 </script>

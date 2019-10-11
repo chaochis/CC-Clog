@@ -2,38 +2,44 @@ server:
   port: 8080
 spring:
   datasource:
-    name: druid
+    druid:
+      url: jdbc:mysql://localhost:3307/cjob?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&useSSL=false
+      username: root
+      password: chao345.
+      #监控统计拦截的filters
+      filters: stat
+      #配置初始化大小/最小/最大
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      #获取连接等待超时时间
+      max-wait: 60000
+      #间隔多久进行一次检测，检测需要关闭的空闲连接
+      time-between-eviction-runs-millis: 60000
+      #一个连接在池中最小生存的时间
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT ‘x’
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      #打开PSCache，并指定每个连接上PSCache的大小。oracle设为true，mysql设为false。分库分表较多推荐设置为false
+      pool-prepared-statements: false
+      max-pool-prepared-statement-per-connection-size: 20
     type: com.alibaba.druid.pool.DruidDataSource
-    #基本属性
-    url: jdbc:mysql://192.168.23.130:3306/cjob?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&useSSL=false
-    username: root
-    password: chao345.
-    #druid相关配置
   redis:
-    host: 192.168.23.130
-    port: 6379
-    database: 0
-druid:
-  #监控统计拦截的filters
-  filters: stat
-  #配置初始化大小/最小/最大
-  initial-size: 1
-  min-idle: 1
-  max-active: 20
-  #获取连接等待超时时间
-  max-wait: 60000
-  #间隔多久进行一次检测，检测需要关闭的空闲连接
-  time-between-eviction-runs-millis: 60000
-  #一个连接在池中最小生存的时间
-  min-evictable-idle-time-millis: 300000
-  validation-query: SELECT ‘x’
-  test-while-idle: true
-  test-on-borrow: false
-  test-on-return: false
-  #打开PSCache，并指定每个连接上PSCache的大小。oracle设为true，mysql设为false。分库分表较多推荐设置为false
-  pool-prepared-statements: false
-  max-pool-prepared-statement-per-connection-size: 20
-  ## 该配置节点为独立的节点，有很多同学容易将这个配置放在spring的节点下，导致配置无法被识别
+#    host: localhost
+#    port: 6379
+#    database: 0
+    cluster:
+      nodes:
+        - 127.0.0.1:9002
+        - 127.0.0.1:9003
+        - 127.0.0.1:9004
+        - 127.0.0.1:9005
+        - 127.0.0.1:9006
+        - 127.0.0.1:9007
+        - 127.0.0.1:9008
+        - 127.0.0.1:9009
 pagehelper:
   helperDialect: mysql
   reasonable: true

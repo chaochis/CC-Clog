@@ -21,12 +21,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void saveUser(UserVO userVO) {
-
+        this.userMapper.insert(userVO);
     }
 
     @Override
     public void deleteUsers(String[] ids) {
-
     }
 
 }

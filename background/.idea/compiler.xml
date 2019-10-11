@@ -9,6 +9,7 @@
         <module name="core" />
         <module name="api" />
         <module name="common" />
+        <module name="test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

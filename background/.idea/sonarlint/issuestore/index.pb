@@ -23,3 +23,11 @@ W
 'api/src/main/java/com/apis/UserApi.java,d\c\dc744133d003109cba5b368825730fecfee7c759
 c
 3core/src/main/java/com/service/def/UserService.java,3\a\3a0c34bbaa7431a0e9667a77616ad5c6fa0559b5
+h
+8core/src/main/java/com/service/impl/UserServiceImpl.java,a\3\a30fa1af3b8b215b89f744067d83126717c5df06
+]
+-core/src/main/java/com/mapper/UserMapper.java,b\c\bc46d15fb2b68d3a46cd6df05534d21eab6396b0
+<
+test/pom.xml,5\a\5a7a6b2644ce7830ef2e46190b48905496aefeb0
+Q
+!test/src/main/java/test/test.java,8\4\84ca04f0dbe8a9335e959d672b23dd47a79dd446

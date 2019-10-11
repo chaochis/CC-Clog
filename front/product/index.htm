@@ -4,27 +4,46 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>-->
 <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/0.7.10/vue-router.min.js"></script> -->
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    </body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/0.7.10/vue-router.min.js"></script> -->
+</head>
+<body>
+<div id="app">
+    <el-select placeholder="日期" v-model="selectValue">
+        <el-option key="1" label="12 : 00" value="1"></el-option>
+        <el-option key="2" label="13 : 00" value="2"></el-option>
+    </el-select>
+    <el-button id="in-btn">组件</el-button>
+</div>
+</body>
 
-    <script type="text/javascript">
-    </script>
 </html>
-
-
-
+<script>
+    var vueApp = new Vue({
+        el: '#app',
+        data: function() {
+            return {
+                selectValue: null,
+            }
+        }
+    });
+    document.getElementById("in-btn").onclick = function (event) {
+        console.log(a);
+    }
+</script>
+<style>
+    .el-dropdown-link{
+        color: dodgerblue;
+        font-size: 14px;
+    }
+</style>

@@ -1,6 +1,8 @@
 <template>
     <div id="cclogin">
-        <span class="cc-login-text">登录</span><el-divider direction="vertical"></el-divider><span class="cc-login-text">注册</span>
+        <div class="div-center">
+          3434
+        </div>
     </div>
 </template>
 <script>
@@ -8,14 +10,15 @@ export default {
     name: "cclogin",
     data(){
         return {};
-    }
+    },
+    created() {
+    },
 }
 </script>
-
 <style scoped>
-
-#cclogin >>> .cc-login-text{
-    color: red;
+#cclogin{
+  background: #4384ff;
+  width: 80%;
+  margin: 0 auto;
 }
-
 </style>
